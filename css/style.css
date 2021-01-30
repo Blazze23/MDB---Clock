@@ -1,0 +1,183 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+    background-color: #333333;
+    color: aqua;
+    box-sizing: border-box;
+  }
+
+ 
+  .btn {
+    border:1px solid aqua;
+  }
+
+  .btn:hover {
+    color: #76FF03;
+    border:1px solid #76FF03;
+  }
+
+.digital_clock {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 50%;
+  border: 5px #76FF03 solid;
+  width: 300px;
+  height: 300px;
+}
+#time {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 48px;
+}
+
+.analog_clock {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 50%;
+  border: 5px aqua solid;
+  width: 300px;
+  height: 300px;
+}
+
+.analog_clock .position {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 25px;
+}
+
+.analog_clock .position1 {
+  --rotation: 30deg;
+}
+
+.analog_clock .position1 #one{
+  transform: rotate(-30deg);
+}
+.analog_clock .position2 {
+  --rotation: 60deg;
+}
+.analog_clock .position2 #two{
+  transform: rotate(-60deg);
+}
+.analog_clock .position3 {
+  --rotation: 90deg;
+}
+.analog_clock .position3 #three{
+  transform: rotate(-90deg);
+}
+.analog_clock .position4 {
+  --rotation: 120deg;
+}
+.analog_clock .position4 #four{
+  transform: rotate(-120deg);
+}
+.analog_clock .position5 {
+  --rotation: 150deg;
+}
+.analog_clock .position5 #five{
+  transform: rotate(-150deg);
+}
+.analog_clock .position6 {
+  --rotation: 180deg;
+}
+.analog_clock .position6 #six{
+  transform: rotate(-180deg);
+}
+.analog_clock .position7 {
+  --rotation: 210deg;
+}
+.analog_clock .position7 #seven{
+  transform: rotate(-210deg);
+}
+.analog_clock .position8 {
+  --rotation: 240deg;
+}
+.analog_clock .position8 #eight{
+  transform: rotate(-240deg);
+}
+.analog_clock .position9 {
+  --rotation: 270deg;
+}
+.analog_clock .position9 #nine{
+  transform: rotate(-270deg);
+}
+.analog_clock .position10 {
+  --rotation: 300deg;
+}
+.analog_clock .position10 #ten{
+  transform: rotate(-300deg);
+}
+.analog_clock .position11 {
+  --rotation: 330deg;
+}
+.analog_clock .position11 #eleven{
+  transform: rotate(-330deg);
+}
+
+.analog_clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: aqua;
+  border: 1px solid rgb(4, 4, 99);
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+  z-index: 10;
+}
+
+.analog_clock::after {
+  content: "";
+  position: absolute;
+  background-color:  rgb(4, 4, 99);
+  z-index: 11;
+  width: 15px;
+  height:15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+}
+
+.analog_clock .hand.hour {
+  width: 8px;
+  height: 35%;
+  background-color: aqua;
+}
+
+.analog_clock .hand.minute {
+  width: 5px;
+  height: 40%;
+  background-color: aqua;
+}
+
+.analog_clock .hand.second {
+  width: 3px;
+  height: 45%;
+  background-color: rgb(4, 4, 99);
+}
+
+.digitalClass{
+  color: #76FF03;
+}
+
+.digitalBtn{
+  border:1px solid #76FF03;
+}
+
+.digitalBtn:hover{
+  color: aqua;
+  border:1px solid aqua;
+}
