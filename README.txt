@@ -1,3 +1,5 @@
+Analog and Digital clock app created with MD Bootstrap where you can switch between the two on button click.
+
 Material Design for Bootstrap
 Version: MDB FREE 4.19.2
 
