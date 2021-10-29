@@ -1,4 +1,4 @@
-Analog and Digital clock app created with MD Bootstrap, Javascript and jQuery where you can switch between the two on button click.
+#Analog and Digital clock app created with MD Bootstrap, Javascript and jQuery where you can switch between the two on button click.
 
 Live preview: https://mdbtimeteller.netlify.app/
 
@@ -26,4 +26,3 @@ https://mdbootstrap.com/forums/forum/support/
 
 Contact:
 office@mdbootstrap.com
-
