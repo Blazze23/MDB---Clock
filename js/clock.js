@@ -2,10 +2,9 @@
 
 class Clock {
   constructor() {
-    const tick = () => {
-      this.time = new Date();
-    };
+    const tick = () => (this.time = new Date());
     tick();
+
     setInterval(tick.bind(this), 1000);
   }
 
