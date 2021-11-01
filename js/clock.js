@@ -2,10 +2,10 @@
 
 class Clock {
   constructor() {
-    const tick = function () {
+    const tick = () => {
       this.time = new Date();
     };
-
+    tick();
     setInterval(tick.bind(this), 1000);
   }
 
@@ -63,7 +63,7 @@ class Clock {
    * @param {boolean} [seconds] Whether to display seconds
    * @param {boolean} [is24]    Whether to display as 24h or 12h am/pm
    */
-  toDigital(seconds = true, is24 = false) {
+  toDigital(seconds = true, is24 = true) {
     const h = String(this.time.getHours());
     const m = String(this.time.getMinutes()).padStart(2, "0");
     const s = String(this.time.getSeconds()).padStart(2, "0");
@@ -107,7 +107,7 @@ $(document).ready(function () {
   const $handM = $("#minuteHand");
   const $handS = $("#secondHand");
 
-  setInterval(function () {
+  const init = function () {
     const { Day, Month, Year } = clock.getDate();
     $date.text(`${Day}/${Month + 1}/${Year}`);
 
@@ -120,7 +120,10 @@ $(document).ready(function () {
     // $handH.css("--rotation", clock.getDegH())
     // $handM.css("--rotation", clock.getDegM())
     // $handS.css("--rotation", clock.getDegS())
-  }, 1000);
+  };
+  init();
+
+  setInterval(init, 1000);
 });
 
 function changeTime() {
