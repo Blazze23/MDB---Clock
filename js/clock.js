@@ -128,9 +128,7 @@ $(document).ready(function () {
 function changeTime() {
   $("#digital_clock").toggle();
   $("#analog_clock").toggle();
-  $("#btnTime").text(function (_, text) {
-    return text === "Digital" ? "Analog" : "Digital";
-  });
+  $("#btnTime").text((_, text) => (text === "Analog" ? "Digital" : "Analog"));
   $("body").toggleClass("digitalClass");
   $("button").toggleClass("digitalBtn");
 }
